@@ -1,0 +1,21 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.Fondo{
+background-image: url(../images/image.png);
+background-size: cover;
+background-position: center;
+min-height: 100px;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+}
+.Fondo h1{
+color: #ffffff;
+font-size: 3rem;
+margin: 0;
+padding: 15px 35px;
+background: rgba(255, 255, 255, 0.15);
+}
