@@ -1,36 +1,71 @@
+/* Reseteo básico para evitar espacios blancos indeseados */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background-color: #000;
+}
+
+/* 1. Posicionamiento correcto del video de fondo */
+#video-fondo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover; /* Hace que el video llene toda la pantalla */
+  z-index: -1;       /* Lo coloca detrás del contenido */
+}
+
+/* 2. Barra superior estilizada sobre el video */
 .Fondo {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../images/5501609ee45d514d1f2c4a63502045e2.gif');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  
-  width: 100%;                  /* Ocupa todo el ancho disponible */
+  width: 100%;
+  min-height: 120px;
+  background: rgba(0, 0, 0, 0.4); /* Capa translúcida sobre el video */
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+background-image: url('../images/5501609ee45d514d1f2c4a63502045e2.gif');
   display: flex;
-  justify-content: space-between; /* Mueve el título al extremo izquierdo y el menú al derecho */
-  align-items: center;            /* Centra verticalmente */
-  padding: 20px 50px;             /* Espacio respecto a los bordes de la pantalla */
-  box-sizing: border-box;         /* Evita desbordamientos horizontales */
-}
-
-.contenido {
-  display: flex;
+  justify-content: space-between; /* Título a la izquierda, menú a la derecha */
   align-items: center;
+  padding: 20px 40px;
 }
 
+/* Tarjeta del nombre */
+.contenido h1 {
+  color: #ffffff;
+  font-size: 1.8rem;
+  margin: 0;
+  padding: 10px 20px;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  white-space: nowrap;
+}
+
+/* Menú a la derecha */
 .menu {
   display: flex;
-  gap: 25px;                    /* Separación entre los botones */
+  gap: 20px; /* Separación entre botones */
   align-items: center;
 }
 
+/* Botones rectangulares con bordes redondeados */
 .menu a {
-  color: #ff6700;
+  color: #000000;
   background-color: #0CFFF4;
   text-decoration: none;
-  font-size: 0.95rem;
-  font-weight: 600;
+  font-size: 0.9rem;
+  font-weight: bold;
   
-  padding: 10px 22px;
+  padding: 10px 20px;
   border-radius: 25px;
   
   display: inline-flex;
@@ -38,11 +73,45 @@
   align-items: center;
   white-space: nowrap;
   
-  transition: transform 0.2s ease, background-color 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .menu a:hover {
   color: #ffffff;
   background-color: #ff6700;
   transform: translateY(-2px);
+}
+
+.seccion-info {
+  min-height: 80vh; /* Da altura a la sección para permitir el scroll */
+  padding: 60px 40px;
+  background: rgba(0, 0, 0, 0.6);
+  margin: 20px 0;
+}
+
+.seccion-info h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #0CFFF4;
+}
+
+.seccion-info p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 800px;
+}
+
+.seccion-info h1{
+  color: #fff;
+  text-shadow: 0 0 5px #fff, 
+  0 0 10px #fff, 
+  0 0 20px #011210, 
+  0 0 40px #050820;
+}
+.seccion-info p{
+    color: #092220;
+  text-shadow: 0 0 5px #fff, 
+  0 0 10px #fff, 
+  0 0 20px #661ec4, 
+  0 0 40px #ee033a;
 }
