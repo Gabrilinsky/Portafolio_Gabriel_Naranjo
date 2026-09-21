@@ -109,9 +109,55 @@ background-image: url('../images/5501609ee45d514d1f2c4a63502045e2.gif');
   0 0 40px #050820;
 }
 .seccion-info p{
-    color: #092220;
+    color: #edf2f1;
   text-shadow: 0 0 5px #fff, 
-  0 0 10px #fff, 
-  0 0 20px #661ec4, 
-  0 0 40px #ee033a;
+  0 0 10px #392121, 
+  0 0 20px #16111d, 
+  0 0 40px #301018;
+}
+
+.letra{
+      color: #edf2f1;
+  text-shadow: 0 0 5px #fff, 
+  0 0 10px #392121, 
+  0 0 20px #16111d, 
+  0 0 40px #301018;
+}
+
+
+
+.skills-container {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px; 
+}
+
+
+.skill-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px; 
+  color: #333333;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+
+.progress-bar-bg {
+  width: 100%;
+  height: 12px;
+  background-color: #eceff1;
+  border-radius: 0px; 
+  overflow: hidden;
+}
+
+
+.progress-bar-fill {
+  height: 100%;
+  background-color: #a3a286; 
+  transition: width 1s ease-in-out; 
 }
