@@ -147,17 +147,64 @@ background-image: url('../images/5501609ee45d514d1f2c4a63502045e2.gif');
 }
 
 
-.progress-bar-bg {
+
+
+
+
+.images
+{
+height: 200px;
+}
+
+
+.colegio-bloque{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 60px;
+  gap: 30px;
+}
+
+.progress-bar-bg-yellow{
   width: 100%;
   height: 12px;
-  background-color: #eceff1;
+  background-color: yellow;
   border-radius: 0px; 
   overflow: hidden;
 }
 
+.progress-bar-fill-yellow{
+    height: 100%;
+  background-color: yellow;
+  transition: width 1s ease-in-out; 
+}
 
-.progress-bar-fill {
-  height: 100%;
-  background-color: #a3a286; 
+.progress-bar-bg-purple{
+width: 100%;
+  height: 12px;
+  background-color: purple;
+  border-radius: 0px; 
+  overflow: hidden;
+}
+
+.progress-bar-fill-purple{
+    height: 100%;
+  background-color: purple;
+  transition: width 1s ease-in-out; 
+}
+
+.progress-bar-bg-orange{
+width: 100%;
+  height: 12px;
+  background-color: orangered;
+  border-radius: 0px; 
+  overflow: hidden;
+}
+
+.progress-bar-fill-orange{
+    height: 100%;
+  background-color: orangered;
   transition: width 1s ease-in-out; 
 }
