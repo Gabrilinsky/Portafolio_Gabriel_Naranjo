@@ -116,6 +116,11 @@ body {
   font-size: 1.1rem;
   line-height: 1.6;
   max-width: 800px;
+  color: #edf2f1;
+  text-shadow: 0 0 5px #fff, 
+               0 0 10px #392121, 
+               0 0 20px #16111d, 
+               0 0 40px #301018;
 }
 
 .seccion-info h1 {
@@ -124,14 +129,6 @@ body {
                0 0 10px #fff, 
                0 0 20px #011210, 
                0 0 40px #050820;
-}
-
-.seccion-info p {
-  color: #edf2f1;
-  text-shadow: 0 0 5px #fff, 
-               0 0 10px #392121, 
-               0 0 20px #16111d, 
-               0 0 40px #301018;
 }
 
 .letra {
@@ -205,52 +202,57 @@ body {
   transition: width 1s ease-in-out; 
 }
 
-/* Proyectos */
+/* ============================================================
+   SECCIÓN PROYECTOS (Para PC / Pantallas grandes)
+   ============================================================ */
+
 #Proyectos {
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
 }
 
 #Proyectos h1 {
   width: 100%;
-}
-
-#Proyectos a {
-  width: 100%;
-  color: #edf2f1;
-  text-shadow: 0 0 5px #fff, 
-               0 0 10px #392121, 
-               0 0 20px #16111d, 
-               0 0 40px #301018;
-  text-decoration: none;
-  font-size: 0.9rem;
-  font-weight: bold;
-  padding: 10px 20px;
-  border-radius: 25px;
   text-align: center;
-  background-color: #25abbd;
+  margin-bottom: 30px;
 }
 
-#Proyectos a:hover {
-  color: #ffffff;
-  background-color: #25abbd;
-  border: 2px solid #00f3ff;
-  box-shadow: 0 0 10px #ffffff,   
-              0 0 20px #00f3ff,   
-              0 0 40px #00f3ff,   
-              0 0 80px #00f3ff;
+/* Grilla de 2 columnas en PC */
+.proyectos-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
-#Proyectos .images {
-  width: 48%;
-  height: auto;
-  object-fit: cover;
-  border-radius: 8px;
+/* Tarjeta individual del proyecto */
+.proyecto-card {
+  display: block;
+  width: 100%;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(12, 255, 244, 0.4);
+  background: rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
+.proyecto-card:hover {
+  transform: translateY(-5px);
+  border-color: #00f3ff;
+  box-shadow: 0 0 15px rgba(0, 243, 255, 0.5),
+              0 0 30px rgba(0, 243, 255, 0.2);
+}
+
+/* Ajuste uniforme para las 4 imágenes */
+.proyecto-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover; /* Mantiene la proporción y llena la tarjeta sin deformarse */
+  display: block;
+}
 
 /* ============================================================
    ESTILOS ADAPTATIVOS PARA TELÉFONOS (Móviles max 768px)
@@ -348,18 +350,12 @@ body {
     object-fit: contain;
   }
 
-  /* Sección Proyectos (1 por columna) */
-  #Proyectos {
-    flex-direction: column;
-    gap: 20px;
+  /* Cambio a 1 sola columna en Móvil */
+  .proyectos-grid {
+    grid-template-columns: 1fr;
   }
 
-  #Proyectos .images {
-    width: 100%;
-    max-width: 350px;
-    height: auto;
-    max-height: 220px;
-    border: 1px solid rgba(12, 255, 244, 0.4);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+  .proyecto-card img {
+    height: 180px;
   }
 }
