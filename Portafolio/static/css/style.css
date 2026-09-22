@@ -332,30 +332,44 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.2);
   }
 
-  /* Sección Habilidades */
-  #habilidad {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
 
-  .skills-container {
-    width: 100%;
-  }
+/* Contenedor principal de la sección habilidades */
+#habilidad {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
 
-  #habilidad > .images {
-    width: 100%;
-    max-width: 280px;
-    height: auto;
-    object-fit: contain;
-  }
+/* Alinea la tarjeta de imagen y las barras en fila (horizontal) */
+.habilidades-contenido {
+  display: flex;
+  flex-direction: row;        /* Pone elementos lado a lado */
+  align-items: center;        /* Centra verticalmente */
+  justify-content: center;    /* Centra en medio de la pantalla */
+  gap: 50px;                  /* Espacio entre la imagen y las barras */
+  width: 100%;
+  margin-top: 20px;
+}
 
-  /* Cambio a 1 sola columna en Móvil */
-  .proyectos-grid {
-    grid-template-columns: 1fr;
-  }
+/* Tarjeta/Imagen al medio */
+.habilidades-imagen {
+  flex-shrink: 0;
+}
 
-  .proyecto-card img {
-    height: 180px;
-  }
+.habilidades-imagen img {
+  width: 320px;
+  height: auto;
+  border-radius: 12px;
+  display: block;
+}
+
+/* Barras de progreso a la derecha */
+.skills-container {
+  width: 100%;
+  max-width: 450px;           /* Limita el ancho de las barras para que no ocupen toda la pantalla */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
 }
