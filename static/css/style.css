@@ -1,0 +1,380 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background-color: #000;
+}
+
+#quien-soy {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+#quien-soy .titulo {
+  margin-bottom: 15px;
+}
+
+#quien-soy p {
+  max-width: 800px;
+}
+
+#video-fondo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover; 
+  z-index: -1;       
+}
+
+.Fondo {
+  width: 100%;
+  min-height: 120px;
+  background: rgba(0, 0, 0, 0.4); 
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  background-image: url('../images/5501609ee45d514d1f2c4a63502045e2.gif');
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+}
+
+.contenido h1 {
+  color: #ffffff;
+  font-size: 1.8rem;
+  margin: 0;
+  padding: 10px 20px;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  white-space: nowrap;
+}
+
+.menu {
+  display: flex;
+  gap: 20px; 
+  align-items: center;
+}
+
+.menu a {
+  color: #000000;
+  background-color: #0CFFF4;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-shadow: 0 0 5px #fff, 
+               0 0 10px #392121, 
+               0 0 20px #16111d, 
+               0 0 40px #301018;
+  padding: 10px 20px;
+  border-radius: 25px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+}
+
+.menu a:hover {
+  color: #ffffff;
+  background-color: #25abbd;
+  border: 2px solid #00f3ff;
+  box-shadow: 0 0 10px #ffffff,   
+              0 0 20px #00f3ff,   
+              0 0 40px #00f3ff,   
+              0 0 80px #00f3ff;
+  transform: translateY(-2px);
+}
+
+.seccion-info {
+  min-height: 80vh;
+  padding: 60px 40px;
+  background: rgba(0, 0, 0, 0.6);
+  margin: 20px 0;
+}
+
+.seccion-info h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #0CFFF4;
+}
+
+.seccion-info p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 800px;
+  color: #edf2f1;
+  text-shadow: 0 0 5px #fff, 
+               0 0 10px #392121, 
+               0 0 20px #16111d, 
+               0 0 40px #301018;
+}
+
+.seccion-info h1 {
+  color: #fff;
+  text-shadow: 0 0 5px #fff, 
+               0 0 10px #fff, 
+               0 0 20px #011210, 
+               0 0 40px #050820;
+}
+
+.letra {
+  color: #edf2f1;
+  text-shadow: 0 0 5px #fff, 
+               0 0 10px #392121, 
+               0 0 20px #16111d, 
+               0 0 40px #301018;
+}
+
+.skills-container {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px; 
+}
+
+.skill-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px; 
+  color: #edf2f1;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.images {
+  height: 200px;
+  border-radius: 8px;
+}
+
+.colegio-bloque {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 60px;
+  gap: 30px;
+}
+
+/* Barras de progreso */
+.progress-bar-bg-yellow,
+.progress-bar-bg-purple,
+.progress-bar-bg-orange {
+  width: 100%;
+  height: 12px;
+  border-radius: 6px;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.progress-bar-fill-yellow {
+  height: 100%;
+  background-color: yellow;
+  transition: width 1s ease-in-out; 
+}
+
+.progress-bar-fill-purple {
+  height: 100%;
+  background-color: purple;
+  transition: width 1s ease-in-out; 
+}
+
+.progress-bar-fill-orange {
+  height: 100%;
+  background-color: orangered;
+  transition: width 1s ease-in-out; 
+}
+
+/* ============================================================
+   SECCIÓN PROYECTOS (Para PC / Pantallas grandes)
+   ============================================================ */
+
+#Proyectos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#Proyectos h1 {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Grilla de 2 columnas en PC */
+.proyectos-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Tarjeta individual del proyecto */
+.proyecto-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;    /* Centra horizontalmente los elementos */
+  justify-content: center; /* Centra verticalmente si hay espacio extra */
+  text-align: center;      /* Centra las líneas de texto */
+  width: 100%;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(12, 255, 244, 0.4);
+  background: rgba(0, 0, 0, 0.6);
+  padding-bottom: 10px;    /* Espacio inferior para el texto */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.proyecto-card:hover {
+  transform: translateY(-5px);
+  border-color: #00f3ff;
+  box-shadow: 0 0 15px rgba(0, 243, 255, 0.5),
+              0 0 30px rgba(0, 243, 255, 0.2);
+}
+
+/* Ajuste uniforme para las 4 imágenes */
+.proyecto-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover; /* Mantiene la proporción y llena la tarjeta sin deformarse */
+  display: block;
+}
+
+/* ============================================================
+   ESTILOS ADAPTATIVOS PARA TELÉFONOS (Móviles max 768px)
+   ============================================================ */
+@media screen and (max-width: 768px) {
+
+  /* Cabeza y Menú Móvil */
+  .Fondo {
+    flex-direction: column;
+    padding: 15px;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .contenido h1 {
+    font-size: 1.4rem;
+    white-space: normal;
+  }
+
+  .menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .menu a {
+    font-size: 0.8rem;
+    padding: 10px 5px;
+    white-space: normal;
+  }
+
+  /* Ajuste de Secciones Generales */
+  .seccion-info {
+    padding: 30px 15px;
+    margin: 15px 10px;
+    border-radius: 16px;
+    min-height: auto;
+  }
+
+  /* Tarjetas llamativas para cada Colegio */
+  .colegio-bloque {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.65);
+    border: 1px solid rgba(12, 255, 244, 0.4);
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 243, 255, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+
+  .colegio-texto h1 {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+
+  .colegio-texto ul {
+    padding-left: 10px;
+  }
+
+  .colegio-imagen {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .colegio-imagen .images {
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+
+/* Contenedor principal de la sección habilidades */
+#habilidad {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Alinea la tarjeta de imagen y las barras en fila (horizontal) */
+.habilidades-contenido {
+  display: flex;
+  flex-direction: row;        /* Pone elementos lado a lado */
+  align-items: center;        /* Centra verticalmente */
+  justify-content: center;    /* Centra en medio de la pantalla */
+  gap: 50px;                  /* Espacio entre la imagen y las barras */
+  width: 100%;
+  margin-top: 20px;
+}
+
+/* Tarjeta/Imagen al medio */
+.habilidades-imagen {
+  flex-shrink: 0;
+}
+
+.habilidades-imagen img {
+  width: 320px;
+  height: auto;
+  border-radius: 12px;
+  display: block;
+}
+
+/* Barras de progreso a la derecha */
+.skills-container {
+  width: 100%;
+  max-width: 450px;           /* Limita el ancho de las barras para que no ocupen toda la pantalla */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+}
